@@ -717,11 +717,13 @@ footer .social .circle:hover {
     width: 100%;
     padding: 0.5em 2em;
   }
-  .container .sobre,
   .container #especialidades,
   .container #contato {
     height: inherit;
     padding-top: 35%;
+  }
+  .container .sobre{
+    padding-top: 10%;
   }
   .container .sobre form,
   .container #especialidades form,
@@ -759,6 +761,9 @@ footer .social .circle:hover {
 @media (min-width: 768px) {
   .navbar-nav > li {
     float: none !important;
+  }
+  .header > .logo {
+    text-align: left;
   }
 }
 
