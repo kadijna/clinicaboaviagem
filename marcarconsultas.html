@@ -19,16 +19,6 @@
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:633916,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 </head>
 
 <body class="body">
@@ -36,15 +26,15 @@
         <div class="col-md-3 col-xs-12 logo">
             <h1><a href="index.html" title="Página Inicial">Clínica Boa Viagem</a></h1>
         </div>
-        <nav class="col-md-9 hidden-xs">
-                <ul class="col-md-12">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
-                    <li><a href="consultas.html">Consultas</a></li>
-                    <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
-                    <li><a href="perfil.html" alt="perfil">Meu Perfil</a></li>
-                </ul>
-            </nav>
+        <nav class="menu col-md-9 hidden-xs">
+            <ul class="navbar-nav col-md-12">
+                <li class="nav-item"><a class="nav-link" id="linkHome" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkEspc" href="index.html#especialidades">Especialidades</a></li>
+                <li class="nav-item active"><a class="nav-link" id="linkConsulta" href="consultas.html">Consultas</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkContato" href="index.html#contato">Contato</a></li>
+                <li class="nav-item perfil"><a href="perfil.html">Meu perfil</a></li>
+            </ul>
+        </nav>
             <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
                 <i class="fa fa-bars"></i>
             </button>
@@ -93,14 +83,22 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Data</label>
-                                <input type="date">
+                                <input type="date" min="2017-10-01" max="2017-10-10" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Horário</label>
-                                <input type="time">
+                                <select name="hora" class="form-group">
+                                    <option value="default" selected disabled hidden>selecione um horário</option>
+                                    <option value="nove">9:00</option>
+                                    <option value="novemeia">9:30</option>
+                                    <option value="dez">10:00</option>
+                                </select>
                             </div>
                             <div class="center">
-                                <button type="submit"><a href="perfil.html">Confirmar consulta</a></button>
+                                <button class="confirm-consulta" type="submit"><a href="perfil.html">Confirmar consulta</a></button>
+                            </div>
+                            <div class="alert alert-success center" role="alert">
+                                    Sucesso! Um email com os dados da consulta foi enviado.
                             </div>
                     </form>
             </div>

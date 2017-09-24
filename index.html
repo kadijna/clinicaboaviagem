@@ -19,16 +19,6 @@
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:633916,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 </head>
 
 <body class="body">
@@ -36,13 +26,13 @@
         <div class="col-md-3 col-xs-12 logo">
             <h1><a href="index.html" title="Página Inicial">Clínica Boa Viagem</a></h1>
         </div>
-        <nav class="col-md-9 hidden-xs">
-            <ul class="col-md-12">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
-                <li><a href="consultas.html">Consultas</a></li>
-                <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
-                <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
+        <nav class="menu col-md-9 hidden-xs">
+            <ul class="navbar-nav col-md-12  navbar-right">
+                <li class="nav-item"><a class="nav-link" id="linkHome" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkEspc" href="index.html#especialidades">Especialidades</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkConsulta" href="consultas.html">Consultas</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkContato" href="index.html#contato">Contato</a></li>
+                <li class="nav-item"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
             </ul>
         </nav>
         <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button"  alt="Botão login">
@@ -67,14 +57,11 @@
         <p>Sábado das 8:00h até as 13:00h</p>
     </div>
 
+
+    <div class="banner">
+        <img src="public/img/banner.jpg" alt="">
+    </div>
     <div class="container">
-        <div class="banner">
-            <div class="row">
-                <div class="col-md-12">
-                    <img src="public/img/banner.jpg" alt="">
-                </div>
-            </div>
-        </div>
         <div class="sobre">
             <h2>Sobre</h2>
             <h3>Descubra a história desde da fundação</h3>
@@ -118,28 +105,30 @@
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+<div class="bg">
+    <div class="container">
         <div id="especialidades">
             <h2>Especialidades</h2>
             <h3>Conheça mais do que fazemos de melhor para você!</h3>
             <ul class="col-md-12">
                 <li class="col-md-4">
-                    <a href="#">
+                    <a>
                         <i class="fa fa-eye" aria-hidden="true"></i>
                     </a>
                     <span>Oftalmologia</span>
                     <p>Lorem ipsum dolor sit amet consecter adipisicing elit. Vitae dicta obcaecati</br> aliquid exercitationem? Id quod tempore, blanditiis sed sint, obcaecati.</p>
                 </li>
                 <li class="col-md-4">
-                    <a href="#">
+                    <a>
                         <i class="fa fa-child" aria-hidden="true"></i>
                     </a>
                     <span>Pediatria</span>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dicta obcaecati aliquid exercitationem? Id quod tempore, blanditiis sed sint, obcaecati, esse repellendus omnis provident suscipit perspiciatis at natus cupiditate temporibus?</p>
                 </li>
                 <li class="col-md-4">
-                    <a href="#">
+                    <a>
                         <i class="fa fa-venus" aria-hidden="true"></i>   
                     </a>
                     <span>Ginecologia</span>
@@ -147,6 +136,9 @@
                 </li>
             </ul>
         </div>
+    </div>
+</div>
+    <div class="container">
         <div id="contato">
             <h2>Contato</h2>
             <h3>Quer tirar alguma dúvida? ou mesmo falar conosco.</h3>
@@ -155,39 +147,42 @@
                     <form class="col-md-6" action="">
                         <div class="form-group">
                             <label for="">Nome</label>
-                            <input type="text">
+                            <input type="text" required>
                         </div>
                         <div class="form-group">
                             <label for="">E-mail</label>
-                            <input type="email">
+                            <input type="email" required>
                         </div>
                         <div class="form-group">
                             <label for="">Telefone</label>
-                            <input type="number">
+                            <input type="number" required>
                         </div>
                         <div class="form-group">
                             <label for="">Assunto</label>
-                            <select name="Assunto" class="form-group">
+                            <select name="Assunto" class="form-group" required>
                             <option value="default" selected disabled hidden>selecione</option>
                             <option value="sugestao">Sugestão</option>
                             <option value="reclamacao">Reclamação</option>
                             <option value="elogio">Elogio</option>
                         </select>
                         </div>
-                        <textarea name="descricao" class="form-group"></textarea>
+                        <textarea name="descricao" class="form-group" required></textarea>
                         <div class="center">
-                            <button type="submit">Enviar</button>
+                            <button type="submit" >Enviar</button>
+                        </div>
+                        <div class="alert alert-success center" role="alert">
+                            Mensagem enviada com Sucesso!
                         </div>
                     </form>
                     <div class="col-md-5 col-md-offset-1 atendimento">
-                        <h3><i class="fa fa-phone" aria-hidden="true"></i>Atendimento</h3>
+                        <h2>Atendimento</h2>
                         <ul>
                             <h4>Atendimento Telefônico</h4>
                             <li class="p-bot0"><b>Call Center (Pernambuco):</b> 3005.4530</li>
-                            <li><b>SAC 24h (exclusivo para telefones fixos): </b> 0800 340 5040</li>
+                            <li><b>SAC 24h: </b> 0800 340 5040</li>
 
                             <h4>Horário de Funcionamento</h4>
-                            <li class="p-bot0"><b>Seg a Sex</b> das 8:00h às 19:00h</li>
+                            <li class="p-bot0"><b>Segunda a Sexta</b> das 8:00h às 19:00h</li>
                             <li><b>Sábado</b> das 8:00h até as 13:00h</li>
 
                             <h4>Endereço</h4>
@@ -222,7 +217,7 @@
 
     <script src="public/js/jquery-3.2.1.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="public/js/script.js"></script>
+    <script type="text/javascript" src="public/js/script.js" defer></script>
 </body>
 
 </html>

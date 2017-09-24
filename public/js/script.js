@@ -1,5 +1,5 @@
 var scroll = $('html, body');
-$('.btn-contato').click(function() {
+$('#linkContato').click(function() {
     scroll.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
@@ -7,10 +7,9 @@ $('.btn-contato').click(function() {
 });
 
 
-$('.btn-espc').click(function() {
+$('#linkEspc').click(function() {
     scroll.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
+        scrollTop: $($.attr(this, 'href')).offset().top}, 500);
     return false;
 });
 
@@ -30,6 +29,25 @@ $('.btn-mobile').on('click', function(evt) { // capturar o click
 
 });
 
-$('.navbar-aluno li a').on('click', function() {
-    $(this).addClass("active");
+$('.confirm-consulta').on('click', function(evt) { // capturar o click
+    $('.alert').show();
+});
+$('.cadastro').on('click', function(evt) { // capturar o click
+    $('.alert').show();
+});
+$('#contato form button').on('click', function(evt) { // capturar o click
+    $('.alert').show();
+});
+
+var selector = '.menu ul li';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+    localStorage.setItem('active', $(this).children().attr('id'));
+});
+
+$(window).on('load', function() {
+    var linkActived = '#' + localStorage.getItem('active');
+    $(linkActived).parent().addClass('active');
 });

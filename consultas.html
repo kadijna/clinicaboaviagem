@@ -19,16 +19,6 @@
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:633916,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 </head>
 
 <body class="body">
@@ -36,15 +26,15 @@
         <div class="col-md-3 col-xs-12 logo">
             <h1><a href="index.html" title="Página Inicial">Clínica Boa Viagem</a></h1>
         </div>
-        <nav class="col-md-9 hidden-xs">
-                <ul class="col-md-12">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
-                    <li><a href="consultas.html">Consultas</a></li>
-                    <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
-                    <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
-                </ul>
-            </nav>
+        <nav class="menu col-md-9 hidden-xs">
+            <ul class="navbar-nav col-md-12">
+                <li class="nav-item"><a class="nav-link" id="linkHome" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkEspc" href="index.html#especialidades">Especialidades</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkConsulta" href="consultas.html">Consultas</a></li>
+                <li class="nav-item"><a class="nav-link" id="linkContato" href="index.html#contato">Contato</a></li>
+                <li class="nav-item"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
+            </ul>
+        </nav>
             <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
                 <i class="fa fa-bars"></i>
             </button>
@@ -72,14 +62,14 @@
             <div class="col-md-12 consultas">
                     <h2>Consultas</h2>
                     <h3>Marque ou desmarque sua consulta</h3>
-                <div class="bloco-consultas">
-                    <div class="col-md-4 text-right col-md-offset-1">
+                <div class="bloco-consultas col-xs-12">
+                    <div class="col-md-4 text-right col-md-offset-1 col-sm-6">
                         <a href="marcarconsultas.html" title="Clique aqui para marcar consulta">
                             <i class="fa fa-check" aria-hidden="true" alt="Clique aqui para marcar consulta"></i>
                             marcar consulta
                         </a>
                     </div>
-                    <div class="col-md-6 col-md-offset-2">
+                    <div class="col-md-4 col-md-offset-1 col-sm-6">
                         <a href="" title="Clique aqui para desmarcar consulta">
                             <i class="fa fa-times" aria-hidden="true" alt="Desmarque sua consulta"></i>
                             Desmarcar consulta

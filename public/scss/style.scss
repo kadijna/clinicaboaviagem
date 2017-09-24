@@ -7,22 +7,28 @@
 .body {
     font-size: 62.5%!important; //16 pixels = 100%, 10 pixels é igual a 62.5% (resumindo 1em passa a ser 10px).
     font-family: 'Segoe UI', sans-serif;
-    background: red;
+    background:  #eeeff5;
     h1 {
         font-size: 2.5em;
     }
     h2 {
-        font-weight: 100;
+        font-weight: 400;
     }
     h3 {
         margin-top: 0;
         font-size: 3em;
         margin-bottom: 3em;
+        font-weight: 400;
     }
     input[type="submit"],
     button,
     a {
         cursor: pointer;
+    }
+    .bg{
+        background-image: url('../../public/img/bg_especialidades.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -49,9 +55,16 @@ ul {
     }
 }
 
+
 input:focus,
 select:focus {
     outline: none;
+}
+.alert{
+    font-size: 2.5em;
+    margin-top: 2em;
+    margin-bottom: 0!important;
+    display: none;
 }
 
 textarea {
@@ -118,6 +131,7 @@ textarea {
                 display: inline-block;
                 font-size: 2.5em;
                 padding: 0.7em 1em;
+                margin-left: 0.5em;
                 border-bottom: 2px solid transparent;
                 a {
                     text-decoration: none;
@@ -126,6 +140,9 @@ textarea {
                         margin-right: 0.5em;
                     }
                 }
+            }
+            li.active {
+                border-bottom: 2px solid #034276;
             }
             li:hover,
             li:visited,
@@ -147,6 +164,13 @@ textarea {
             li:nth-child(4) {
                 margin-right: 1em;
             }
+            li.perfil{
+                background: transparent;
+                border-radius: 0;
+                a{
+                    color: #034276;
+                }
+            }
         }
     }
 }
@@ -158,6 +182,9 @@ textarea {
     z-index: 9;
     right: 0;
     border-radius: 0 0 8px 8px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
     span {
         font-size: 2.7em;
         color: #034276;
@@ -213,6 +240,7 @@ textarea {
             margin-bottom: 0;
             li {
                 width: 100%;
+                margin: 0;
                 border-bottom: 2px solid #034276;
                 a {
                     text-decoration: none;
@@ -233,7 +261,6 @@ textarea {
         a:hover,
         a.active {
             color: #16609f;
-            background-color: #fff;
         }
     }
 }
@@ -256,21 +283,21 @@ textarea {
 /* ----------------
      Conteúdo
 ------------------*/
+.banner {
+    margin-top: 80px;
+    display: inline-block;
+    img {
+        width: 100%;
+    }
+}
 
 .container {
-    .banner {
-        margin-top: 80px;
-        display: inline-block;
-        img {
-            width: 100%;
-        }
-    }
     .sobre,
     #especialidades,
     #contato,
     .login,
     .consultas {
-        height: 100vh;
+        height: 92vh;
         padding-top: 8%;
     }
     .sobre {
@@ -325,7 +352,7 @@ textarea {
                         color: #ccc;
                         display: inline-block;
                         position: relative;
-                        top: 35px;
+                        top: 40px;
                     }
                 }
                 a:hover {
@@ -380,12 +407,15 @@ textarea {
                 }
             }
             button {
-                padding: 0.5em 2em;
                 font-size: 2.7em;
                 background-color: #034276;
                 color: #fff;
                 border: 0;
                 text-transform: uppercase;
+                a{
+                    padding: 0.5em 2em;
+                    display: block;
+                }
             }
             textarea {
                 height: 15em;
@@ -395,20 +425,31 @@ textarea {
             }
         }
         .atendimento {
-            h3 {
-                font-size: 3.5em;
+            h2 {
+                font-size: 4em;
+                margin-top: 0;
+                margin-bottom: 1.5em;
                 i {
-                    margin-right: 1em;
+                    margin-right: 0.5em;
                 }
             }
             ul {
                 text-align: left;
                 li {
-                    font-size: 2em;
+                    font-size: 2.2em;
+                    padding-top: 0.5em;
                 }
                 h4 {
-                    color: #034276;
+                   color: #286090;
+                   margin-bottom: 0;
                 }
+            }
+        }
+    }
+    #contato {
+        form {
+            button {
+                padding: 0.5em 2em;
             }
         }
     }
@@ -439,35 +480,19 @@ textarea {
                 }
             }
         }
-        .consulta-marcada{
-            ul{
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                background: #fff;
-                display: inline-block;
-                li{
-                    display: inline-block;
-                    font-size: 2em;
-                }
-                a{
-                    text-decoration: none;
-                    font-size: 2em;
-                    background: #01192C;
-                    color: #fff;
-                    border-radius: 50%;
-                    height: 2em;
-                    width: 2em;
-                    padding: 0.3em;
-                    margin-top: 0.6em;
-                }
-            }
-        }
     }
     .login{
         form{
             .form-group{
                 margin-bottom: 0;
+            }
+        }
+        .btn-cadastro{
+            margin-top: 4em;
+            a{
+                font-size: 3em;
+                font-weight: 500;
+                color: #01192C;
             }
         }
     }
@@ -482,25 +507,70 @@ textarea {
             a{
                 font-size: 3em;
                 background: #034276;
-                padding: 1.5em;
+                padding: 1.5em 0.5em;
+                padding-left: 2.5em;
                 color: #fff;
                 border-radius: 8px;
                 text-decoration: none;
-                width: 18em;
+                width: 100%;
                 display: inline-block;
                 text-align: center;
                 text-transform: uppercase;
-                padding-left: 3em;
                 i{
                     position: absolute;
                     font-size: 2em;
                     top: 20px;
-                    left: 40px; 
+                    left: 50px; 
                 }
             }
             a:hover{
                 background: #01192C;
             }
+        }
+    }
+    .lista-consultas{
+        h4{
+            color: #01192C;
+            font-size: 3.5em;
+            margin-bottom: 1.5em;            
+        }
+    .consulta-marcada{
+            margin: 0;
+            padding: 2em;
+            background: #fff;
+            display: inline-block;
+            width: 100%;
+            p{
+                margin-bottom: 0.2em;
+                font-size: 2.7em;
+            
+                span{
+                    font-weight: 500;
+                    padding-right: 0.2em;
+                }
+            }
+            .status{
+                float: right;
+                font-size: 2.2em;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: #3c763d;
+            }
+        }
+    }
+    .dados{
+        h4{
+            color: #01192C;
+            font-size: 3.5em;
+            margin-bottom: 1.5em;            
+        }
+        span{
+            font-size: 2.5em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        p{
+            font-size: 2.7em;
         }
     }
 }
@@ -546,8 +616,8 @@ footer {
 ------------------*/
 
 @media screen and (max-width:480px) {
-    body{
-        padding-top: 10em;
+    .body{
+        margin-top: 18em;
     }
     .header {
         padding-bottom: 0;
@@ -556,13 +626,17 @@ footer {
             margin-bottom: 2em;
         }
     }
+    .banner{
+        margin-top: 0;
+     }
     .container {
-        .contato {
+        #contato {
             form {
                 padding-right: 15px;
                 padding-left: 15px;
                 button {
                     width: 100%;
+                    padding: 0.5em 2em;
                 }
             }
         }
@@ -571,6 +645,9 @@ footer {
         #contato {
             height: inherit;
             padding-top: 35%;
+            form{
+                padding: 4em;
+            }
         }
         #especialidades {
             ul {
@@ -578,13 +655,29 @@ footer {
             }
         }
         .login{
-            padding-top: 45%;
+            padding-top: 15%;
             .col-md-6{
                 padding: 0;
             }
             form{
+                padding: 4em;
                 .forget{
                     float: none;
+                }
+            }
+        }
+        .consultas{
+            .bloco-consultas {
+                height: 0;
+                display: inline-block;
+                margin-top: 25%;
+                .col-md-4{
+                    margin-bottom: 5em;
+                }
+                a{
+                    i{
+                        left: 35px;
+                    }
                 }
             }
         }
@@ -593,6 +686,51 @@ footer {
 
 @media screen and (min-width:600px) {}
 
-@media screen and (max-width:768px) {}
+@media (min-width: 768px){
+    .navbar-nav>li{
+        float: none!important;
+    }
+}
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width:768px) {
+    .body{
+        margin-top: 20em;
+    }
+    .horario,.banner{
+        margin-top: 0;
+    }
+    .consultas{
+        .bloco-consultas {
+            height: 0;
+            display: inline-block;
+            .col-md-4{
+                margin-bottom: 5em;
+            }
+            a{
+                i{
+                    left: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container{
+        .consultas{
+            .bloco-consultas {
+                a{
+                    i{
+                        left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .container .sobre, 
+    .container #especialidades, 
+    .container #contato, 
+    .container .login{
+        height: inherit;
+    }
+}

@@ -19,16 +19,6 @@
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:633916,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
 </head>
 
 <body class="body">
@@ -42,7 +32,7 @@
                     <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
                     <li><a href="consultas.html">Consultas</a></li>
                     <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
-                    <li><a href="perfil.html" alt="perfil">Meu Perfil</a></li>
+                    <li class="perfil active"><a href="perfil.html" alt="perfil">Meu Perfil</a></li>
                 </ul>
             </nav>
             <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
@@ -72,16 +62,21 @@
             <div class="col-md-12 modelo-form">
                     <h2>Meu perfil</h2>  
                     <h3>Visualize suas consultas</h3>  
-                    <div class="consulta-marcada bloco-default">
-                        <ul class="col-md-12">
-                            <label for="">Especialidade</label>
-                            <li class="col-md-3">Oftalmologia</li>
-                            <li class="col-md-4">Luana Brito Pereira</li>
-                            <li class="col-md-2">19/10/2017</li>
-                            <li class="col-md-2">15:20</li>
-                            <li class="col-md-1 fechar-marcada"><a href="">X</a></li>
-                        </ul>
-                    </div>         
+                    <div class="row bloco-default">
+                            <div class="col-md-6 lista-consultas">
+                                <h4>Minhas Consultas</h4>
+                                <div class="consulta-marcada">
+                                    <p><span>Especialidade:</span> Oftalmologia</p>
+                                    <p><span>Médico(a):</span> Luana Brito Pereira</p>
+                                    <p><span>Dia:</span>25/09/2017</p>
+                                    <p><span>Horário:</span>9:00h</p>
+                                    <span class="status">Status: a ser realizada</span>
+                                </div>
+                            </div>       
+                    </div>
+                        
+                       
+                   
             </div>
         </div>
             
