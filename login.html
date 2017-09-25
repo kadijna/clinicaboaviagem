@@ -19,6 +19,22 @@
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 633916,
+                hjsv: 5
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body class="body">
@@ -35,20 +51,20 @@
                 <li class="nav-item"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
             </ul>
         </nav>
-            <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
+        <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
                 <i class="fa fa-bars"></i>
             </button>
-            <nav class="menu-mobile hidden-md hidden-lg hidden-sm">
-                <div class="menu2">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
-                        <li><a href="consultaslogin.html">Consultas</a></li>
-                        <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
-                        <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <nav class="menu-mobile hidden-md hidden-lg hidden-sm">
+            <div class="menu2">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
+                    <li><a href="consultaslogin.html">Consultas</a></li>
+                    <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
+                    <li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <div class="col-md-3 horario pull-right hidden-xs">
         <span>Horário de Funcionamento</span>
@@ -58,60 +74,60 @@
     </div>
 
     <div class="container">
-            <div class="row">
-                    <div class="col-md-12 login">
-                        <div class="col-md-6 col-md-offset-3">
-                            <form action="">
-                                <h2>Login</h2>
-                                <div class="form-group">
-                                    <label for="">E-mail</label>
-                                    <input type="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Senha</label>
-                                    <input type="password" required>
-                                    <a class="forget" href="">Esqueci minha senha</a>
-                                </div>
-                                <p class="center col-md-12">OU</p>
-                                <div class="form-group">
-                                    <label for="">CPF</label>
-                                    <input type="number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Data de nascimento</label>
-                                    <input type="date" required>
-                                </div>
-                                    
-                                <div class="center">
-                                    <button type="submit"><a href="consultaslogin.html">Acessar</a></button>
-                                </div>
-                                <div class="center btn-cadastro">
-                                  <a href="cadastro.html">Ainda não tem cadastro? Cadastre-se</a>
-                                </div>
-                            </form>
+        <div class="row">
+            <div class="col-md-12 login">
+                <div class="col-md-6 col-md-offset-3">
+                    <form action="">
+                        <h2>Login</h2>
+                        <div class="form-group">
+                            <label for="">E-mail</label>
+                            <input type="email" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="">Senha</label>
+                            <input type="password" required>
+                            <a class="forget" href="">Esqueci minha senha</a>
+                        </div>
+                        <p class="center col-md-12">OU</p>
+                        <div class="form-group">
+                            <label for="">CPF</label>
+                            <input type="number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Data de nascimento</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="center">
+                            <button type="submit"><a href="consultaslogin.html">Acessar</a></button>
+                        </div>
+                        <div class="center btn-cadastro">
+                            <a href="cadastro.html">Ainda não tem cadastro? Cadastre-se</a>
+                        </div>
+                    </form>
                 </div>
-            
+            </div>
+        </div>
+
     </div>
-     
+
     <footer class="col-md-12 col-xs-12">
-            <div class="col-md-2 col-xs-6">
-                <img src="public/img/ans-logo-white.png" alt="logo da ANS">
-            </div>
-          
-            <div class="social col-md-10 col-xs-12">
-                <a class="circle">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a class="circle">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a class="circle">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-            </div>
-        </footer>
+        <div class="col-md-2 col-xs-6">
+            <img src="public/img/ans-logo-white.png" alt="logo da ANS">
+        </div>
+
+        <div class="social col-md-10 col-xs-12">
+            <a class="circle">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="circle">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="circle">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
 
     <script src="public/js/jquery-3.2.1.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>

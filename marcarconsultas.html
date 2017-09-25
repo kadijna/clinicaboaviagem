@@ -19,6 +19,22 @@
     <link href="public/css/style.css" rel="stylesheet">
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 633916,
+                hjsv: 5
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body class="body">
@@ -35,20 +51,20 @@
                 <li class="nav-item perfil"><a href="perfil.html">Meu perfil</a></li>
             </ul>
         </nav>
-            <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
+        <button class="btn-mobile hidden-sm hidden-md hidden-lg" name="button" alt="Botão login">
                 <i class="fa fa-bars"></i>
             </button>
-            <nav class="menu-mobile hidden-md hidden-lg hidden-sm">
-                <div class="menu2">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
-                        <li><a href="login.html">Consultas</a></li>
-                        <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
-                        <li><a href="perfil.html" alt="perfil">Meu Perfil</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <nav class="menu-mobile hidden-md hidden-lg hidden-sm">
+            <div class="menu2">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="btn-espc" href="index.html#especialidades">Especialidades</a></li>
+                    <li><a href="login.html">Consultas</a></li>
+                    <li><a class="btn-contato" href="index.html#contato">Contato</a></li>
+                    <li><a href="perfil.html" alt="perfil">Meu Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <div class="col-md-3 horario pull-right hidden-xs">
         <span>Horário de Funcionamento</span>
@@ -60,69 +76,69 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 modelo-form">
-                    <form class="col-md-6 col-md-offset-3" action="">  
-                        <h2>Marcação de consulta</h2>  
-                            <h3>Selecione a data e hora da sua consulta</h3>                        
-                            <div class="form-group">
-                                <label for="">Especialidade</label>
-                                <select name="Assunto" class="form-group">
+                <form class="col-md-6 col-md-offset-3" action="">
+                    <h2>Marcação de consulta</h2>
+                    <h3>Selecione a data e hora da sua consulta</h3>
+                    <div class="form-group">
+                        <label for="">Especialidade</label>
+                        <select name="Assunto" class="form-group">
                                     <option value="default" selected disabled hidden>selecione uma especialidade</option>
                                     <option value="sugestao">Oftalmologia</option>
                                     <option value="reclamacao">Pediatria</option>
                                     <option value="elogio">Ginecologia</option>
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Médico</label>
-                                <select name="Assunto" class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Médico</label>
+                        <select name="Assunto" class="form-group">
                                     <option value="default" selected disabled hidden>selecione um médico</option>
                                     <option value="sugestao">Joyce Alencastro dos Santos</option>
                                     <option value="reclamacao">Guilherme Arantes Rabelo</option>
                                     <option value="elogio">Luana Brito Pereira</option>
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Data</label>
-                                <input type="date" min="2017-10-01" max="2017-10-10" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Horário</label>
-                                <select name="hora" class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Data</label>
+                        <input type="date" min="2017-10-01" max="2017-10-10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Horário</label>
+                        <select name="hora" class="form-group">
                                     <option value="default" selected disabled hidden>selecione um horário</option>
                                     <option value="nove">9:00</option>
                                     <option value="novemeia">9:30</option>
                                     <option value="dez">10:00</option>
                                 </select>
-                            </div>
-                            <div class="center">
-                                <button class="confirm-consulta" type="submit"><a href="perfil.html">Confirmar consulta</a></button>
-                            </div>
-                            <div class="alert alert-success center" role="alert">
-                                    Sucesso! Um email com os dados da consulta foi enviado.
-                            </div>
-                    </form>
+                    </div>
+                    <div class="center">
+                        <button class="confirm-consulta" type="submit"><a href="perfil.html">Confirmar consulta</a></button>
+                    </div>
+                    <div class="alert alert-success center" role="alert">
+                        Sucesso! Um email com os dados da consulta foi enviado.
+                    </div>
+                </form>
             </div>
         </div>
-            
+
     </div>
-     
+
     <footer class="col-md-12 col-xs-12">
-            <div class="col-md-2 col-xs-6">
-                <img src="public/img/ans-logo-white.png" alt="logo da ANS">
-            </div>
-          
-            <div class="social col-md-10 col-xs-12">
-                <a class="circle">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a class="circle">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a class="circle">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-            </div>
-        </footer>
+        <div class="col-md-2 col-xs-6">
+            <img src="public/img/ans-logo-white.png" alt="logo da ANS">
+        </div>
+
+        <div class="social col-md-10 col-xs-12">
+            <a class="circle">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="circle">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="circle">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
 
     <script src="public/js/jquery-3.2.1.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
